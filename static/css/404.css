@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.786);
+}
+
+h1 {
+    color: rgb(210, 255, 247);
+    font-size: 75px;
+    font-family: BebasNue, sans-serif;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-size: 33px;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+    border: 0;
+    background-color: #e50914;
+    color: white;
+    border-radius: 4px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45%;
+}

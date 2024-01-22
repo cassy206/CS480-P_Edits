@@ -1,0 +1,39 @@
+@font-face {
+    font-family: BebasNue;
+    src: url("/static/fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+    font-family: Poppins;
+    src: url("/static/fonts/Poppins-Regular.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.786);
+}
+
+h1 {
+    color: rgb(210, 255, 247);
+    font-size: 75px;
+    font-family: BebasNue, sans-serif;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-size: 33px;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.color {
+    font-size: 36px;
+    color: rgb(210, 255, 247);
+}
