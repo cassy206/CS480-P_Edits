@@ -1,7 +1,7 @@
 # app.py
 from flask import Flask
-from views import main
 from error_handlers import errors
+from views import main
 import models
 
 
@@ -13,6 +13,7 @@ def create_app():
     return app
 
 
+app = create_app()
+
 if __name__ == "__main__":
-    app = create_app()
     app.run(debug=True)
