@@ -14,6 +14,7 @@ def get_data(symbol, url):
     if data is not None:
         timestamp, data_str = data[1], data[2]
         data = json.loads(data_str)  # Convert JSON string back to dict
+        print(data)
         if datetime.now() - datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f') < timedelta(hours=24):
             return data
 
