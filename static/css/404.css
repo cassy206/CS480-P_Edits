@@ -1,39 +1,42 @@
+:root {
+    --primary: #282b30;
+    --secondary: #36393e;
+    --light: #424549;
+    --accent: #7289da;
+    --textColor: #fafbfc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: rgba(0, 0, 0, 0.786);
+    background: var(--primary);
 }
 
 h1 {
-    color: rgb(210, 255, 247);
-    font-size: 75px;
-    font-family: BebasNue, sans-serif;
-    text-align: center;
-}
-h2 {
-    color: white;
-    font-size: 33px;
     font-family: Poppins, sans-serif;
+    color: var(--textColor);
     text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: black;
+    font-size: 3rem;
+    margin-top: 4rem;
 }
 
 button {
     border: 0;
-    background-color: #e50914;
+    background-color: var(--secondary);
     color: white;
-    border-radius: 4px;
-    margin-top: 16px;
-    margin-bottom: 12px;
-    text-align: center;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 20px 20px 20px;
+    padding: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 45%;
+    text-decoration: none;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
 }

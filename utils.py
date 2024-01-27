@@ -7,14 +7,11 @@ import models
 
 
 def get_data(symbol, url):
-    FMP_API_KEY = os.getenv('FMP_API_KEY')
-
     # First, try to get data from the database
     data = models.get_data_from_db(symbol)
     if data is not None:
         timestamp, data_str = data[1], data[2]
         data = json.loads(data_str)  # Convert JSON string back to dict
-        print(data)
         if datetime.now() - datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f') < timedelta(hours=24):
             return data
 

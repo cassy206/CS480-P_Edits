@@ -1,3 +1,4 @@
+// Add a chart for testing purposes
 document.addEventListener('DOMContentLoaded', (event) => {
     const chartData = JSON.parse(document.getElementById('data').textContent);
 

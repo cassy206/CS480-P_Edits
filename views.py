@@ -35,6 +35,3 @@ def stock():
     ]
     chart_data.reverse()
     return render_template("stock.html", data=json.dumps(chart_data))
-
-
-
