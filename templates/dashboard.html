@@ -7,11 +7,18 @@
     <link rel="icon" type="image/x-icon" href="/static/icons/favicon.ico">
 </head>
 <body>
-    <h1>Stock Tracker</h1>
-    <h2>Wooo we love stocks</h2>
-    <form class="search" autocomplete="off" action="{{ url_for('main.stock') }}" method="GET">
+<script>
+   let url = '{{ url }}';
+</script>
+<header>
+   <a href="/">
+      <img src="/static/images/logo.png" alt="Logo" onclick=""{{ url_for('views.dashboard') }}"">
+   </a>
+       <form class="search" autocomplete="off" action="{{ url_for('views.stock') }}" method="GET">
         <input type="text" name="symbol" placeholder="Give stock..." required>
         <input type="submit" value="Submit">
     </form>
+</header>
+    <script src="/static/js/dashboard.js"></script>
 </body>
 </html>

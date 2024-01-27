@@ -1,56 +1,82 @@
-@font-face {
-    font-family: BebasNue;
-    src: url("/static/fonts/BebasNeue-Regular.ttf");
+:root {
+    --primary: #282b30;
+    --secondary: #36393e;
+    --light: #424549;
+    --headerColor: #7289da;
+    --textColor: #fafbfc;
 }
-@font-face {
-    font-family: Poppins;
-    src: url("/static/fonts/Poppins-Regular.ttf");
+* {
+    box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
-    background: rgba(0, 0, 0, 0.786);
+    background: var(--primary);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    height: 50px;
+    margin: 2em 2em 0 2em;
+}
+
+header form {
+    margin: 2em 2em 0 2em;
+}
+
+form input {
+    border: 3px solid #000;
+    border-radius: 5px;
+    user-select: auto;
+    height: 50px;
+    color: var(--textColor);
+    font-size: 1em;
+    background-color: var(--light);
+}
+
+form input:focus{
+    border: 3px solid #5551ff;
 }
 
 h1 {
-    color: rgb(210, 255, 247);
-    font-size: 75px;
+    color: var(--textColor);
+    font-size: 2em;
     font-family: BebasNue, sans-serif;
     text-align: center;
 }
-h2 {
-    color: white;
-    font-size: 33px;
+h2, h3 {
+    color: var(--textColor);
+    font-size: 2em;
     font-family: Poppins, sans-serif;
     text-align: center;
 }
 
 p {
-    color: white;
+    color: var(--textColor);
     font-size: 20px;
     font-family: Poppins, sans-serif;
     text-align: center;
     padding: 30px;
 }
 
-.color {
-    font-size: 36px;
-    color: rgb(210, 255, 247);
+.dashboard-grid{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    margin: clamp(2em, 1.6vw, 6em);
+    text-align: center;
 }
 
-form input {
-    border: 3px solid #000;
-    border-radius: 5px;
-    height: 50px;
-    color: #282828;
-    width: 10em;
-    box-sizing: border-box;
-    user-select: auto;
-    font-size: 16px;
-    padding: 0 6px 0 12px;
-    margin-left: 45%;
+.dashboard-grid:hover {
+    transform: scale(102%);
+    transition-duration: 300ms;
+    cursor: pointer;
 }
 
-form input:focus{
-    border: 3px solid #5551ff;
-}
+
