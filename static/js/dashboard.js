@@ -1,41 +1,39 @@
 // Get the parent element to add the divs
 let parentElement = document.body;
 
-// Array of 10 tech stocks
-let stocks = ["AAPL", "MSFT", "NVDA", "TSM", "AVGO", "ORCL", "ADBE", "ASML", "CSCO", "CRM"];
-
-for (let i = 0; i < stocks.length; i++) {
+for (let symbol in stockData) {
    let div = document.createElement("div");
    div.className = "dashboard-grid";
 
    let ticker = document.createElement("h3");
    ticker.className = "ticker";
-   ticker.textContent = stocks[i];
+   ticker.textContent = symbol;
    div.appendChild(ticker);
+
+   let recentData = stockData[symbol];
 
    let high = document.createElement("h3");
    high.className = "high";
-   high.textContent = "High: $43.37"; // Replace with actual data
+   high.textContent = "High: $" + parseFloat(recentData['2. high']).toFixed(2);
    div.appendChild(high);
 
    let low = document.createElement("h3");
    low.className = "low";
-   low.textContent = "Low: $43.37"; // Replace with actual data
+   low.textContent = "Low: $" + parseFloat(recentData['3. low']).toFixed(2);
    div.appendChild(low);
 
    let open = document.createElement("h3");
    open.className = "open";
-   open.textContent = "Open: $43.37"; // Replace with actual data
+   open.textContent = "Open: $" + parseFloat(recentData['1. open']).toFixed(2);
    div.appendChild(open);
 
    let close = document.createElement("h3");
    close.className = "close";
-   close.textContent = "Close: $43.37"; // Replace with actual data
+   close.textContent = "Close: $" + parseFloat(recentData['4. close']).toFixed(2);
    div.appendChild(close);
 
    // Add the onclick event
    div.onclick = function() {
-      console.log(url);
       window.location.href = url + "?symbol=" + ticker.textContent;
    };
 

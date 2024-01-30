@@ -32,3 +32,8 @@ def insert_data(symbol, data):
 
 def get_data_from_db(symbol):
     return db_operation("SELECT * FROM cache WHERE symbol=?", (symbol,))
+
+
+def delete_data(symbol):
+    db_operation("DELETE FROM cache WHERE symbol=?", (symbol,))
+

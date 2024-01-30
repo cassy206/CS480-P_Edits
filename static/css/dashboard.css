@@ -41,10 +41,6 @@ h1, h2, h3 {
     font-size: 2rem;
 }
 
-h1 {
-    font-family: BebasNue, sans-serif;
-}
-
 .dashboard-grid {
     display: flex;
     border: 1px solid var(--primary);
@@ -52,7 +48,6 @@ h1 {
     background-color: var(--secondary);
     border-radius: 10px;
     margin: clamp(2em, 1.6vw, 6em);
-!important;
     text-align: center;
 }
 

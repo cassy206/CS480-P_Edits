@@ -15,8 +15,20 @@ def default():
 
 @views.route("/dashboard")
 def dashboard():
+    AV_API_KEY = os.getenv('AV_API_KEY')
+    stocks = ["AAPL", "MSFT", "NVDA", "TSM", "AVGO", "ORCL", "ADBE", "ASML", "CSCO", "CRM"]
+    stock_data = {}
+
+    for symbol in stocks:
+        stock_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={AV_API_KEY}"
+        data = get_data(symbol, stock_url)
+        # Get the most recent date's data
+        recent_date = list(data['Time Series (Daily)'].keys())[0]
+        recent_data = data['Time Series (Daily)'][recent_date]
+
+        stock_data[symbol] = recent_data
     url = url_for('views.stock')
-    return render_template('dashboard.html', url=url)
+    return render_template('dashboard.html', stock_data=stock_data, url=url)
 
 
 @views.route("/stock")

@@ -13,6 +13,7 @@ def get_data(symbol, url):
         timestamp, data_str = data[1], data[2]
         data = json.loads(data_str)  # Convert JSON string back to dict
         if datetime.now() - datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f') < timedelta(hours=24):
+            print(symbol + " found in cache")
             return data
 
     # If data is not in the database, or it's older than 24 hours, make a new request
@@ -20,7 +21,9 @@ def get_data(symbol, url):
     data = r.json()
     data_str = json.dumps(data)  # Convert dict to JSON string
 
-    # Save the new data to the database
+    # Delete the old data from the database and save the new data to the database
+    models.delete_data(symbol)
     models.insert_data(symbol, data_str)
-
+    print(symbol + " not found in cache")
     return data
+
