@@ -37,13 +37,18 @@ def stock():
     symbol = request.args.get('symbol')
     stock_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={AV_API_KEY}"
     data = get_data(symbol, stock_url)
-    print(data)
     chart_data = [
         {
             'time': date,
-            'value': float(values['4. close']),
+            'open': float(values['1. open']),
+            'high': float(values['2. high']),
+            'low': float(values['3. low']),
+            'close': float(values['4. close']),
         }
         for date, values in data['Time Series (Daily)'].items()
     ]
     chart_data.reverse()
+    print(chart_data)
     return render_template("stock.html", data=json.dumps(chart_data))
+
+
