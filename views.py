@@ -56,9 +56,6 @@ def stock():
     overview_data = get_data(overview_url)
     overview_data = {key: overview_data[key] for key in overview_data}
 
-    print(chart_data)
-    print(overview_data)
-
     return render_template("stock.html", data=json.dumps(chart_data), overview=json.dumps(overview_data), symbol=symbol)
 
 
