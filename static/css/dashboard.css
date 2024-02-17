@@ -14,6 +14,10 @@ body {
     background: var(--primary);
 }
 
+.accent {
+    color: var(--accent);
+}
+
 header {
     display: flex;
     justify-content: space-between;

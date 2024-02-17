@@ -1,9 +1,11 @@
+const chartWidth = window.innerWidth * (2/3);
+const chartHeight = window.innerHeight * .4;
 document.addEventListener("DOMContentLoaded", (event) => {
    const chartData = JSON.parse(document.getElementById("data").textContent);
 
    const chart = LightweightCharts.createChart(document.getElementById("chart"), {
-         width: window.innerWidth * (2/3),
-         height: window.innerHeight * .4,
+         width: chartWidth,
+         height: chartHeight,
          layout: {
             background: { color: "#282b30" },
             textColor: "#7289da"
@@ -56,8 +58,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
    });
 
    const chart2 = LightweightCharts.createChart(document.getElementById("chart"), {
-         width: window.innerWidth * (2/3),
-         height: window.innerHeight * .4,
+         width: chartWidth,
+         height: chartHeight,
          layout: {
             background: { color: "#282b30" },
             textColor: "#7289da"

@@ -7,6 +7,7 @@ for (let symbol in stockData) {
 
    let ticker = document.createElement("h3");
    ticker.className = "ticker";
+   ticker.className = "accent";
    ticker.textContent = symbol;
    div.appendChild(ticker);
 

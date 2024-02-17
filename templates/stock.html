@@ -15,7 +15,7 @@
    <a href="/">
       <img src="/static/images/logo.png" alt="Logo" onclick=""{{ url_for('views.dashboard') }}"">
    </a>
-   <h1>{{ symbol }} Company Overview</h1>
+   <h1><span class="accent">{{ symbol }}</span> Company Overview</h1>
    <form class="search" autocomplete="off" action="{{ url_for('views.stock') }}" method="GET">
       <input type="text" name="symbol" placeholder="Search stock..." required>
       <input type="submit" value="Submit">
