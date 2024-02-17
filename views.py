@@ -21,7 +21,7 @@ def dashboard():
 
     for symbol in stocks:
         stock_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={AV_API_KEY}"
-        data = get_data(symbol, stock_url)
+        data = get_data(stock_url)
         # Get the most recent date's data
         recent_date = list(data['Time Series (Daily)'].keys())[0]
         recent_data = data['Time Series (Daily)'][recent_date]
@@ -35,8 +35,10 @@ def dashboard():
 def stock():
     AV_API_KEY = os.getenv('AV_API_KEY')
     symbol = request.args.get('symbol')
+
+    # Time Series Daily API call
     stock_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={AV_API_KEY}"
-    data = get_data(symbol, stock_url)
+    data = get_data(stock_url)
     chart_data = [
         {
             'time': date,
@@ -48,7 +50,16 @@ def stock():
         for date, values in data['Time Series (Daily)'].items()
     ]
     chart_data.reverse()
+
+    # Overview API call
+    overview_url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={symbol}&apikey={AV_API_KEY}"
+    overview_data = get_data(overview_url)
+    overview_data = {key: overview_data[key] for key in overview_data}
+
     print(chart_data)
-    return render_template("stock.html", data=json.dumps(chart_data))
+    print(overview_data)
+
+    return render_template("stock.html", data=json.dumps(chart_data), overview=json.dumps(overview_data), symbol=symbol)
+
 
 

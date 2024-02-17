@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
    const chart = LightweightCharts.createChart(document.getElementById("chart"), {
          width: window.innerWidth * (2/3),
-         height: window.innerHeight / 2,
+         height: window.innerHeight * .4,
          layout: {
             background: { color: "#282b30" },
             textColor: "#7289da"
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
    // Adjust the starting bar width (essentially the horizontal zoom)
    chart.timeScale().applyOptions({
-      barSpacing: 10
+      barSpacing: 12
    });
 
    chart.applyOptions({
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
    const chart2 = LightweightCharts.createChart(document.getElementById("chart"), {
          width: window.innerWidth * (2/3),
-         height: window.innerHeight / 2,
+         height: window.innerHeight * .4,
          layout: {
             background: { color: "#282b30" },
             textColor: "#7289da"
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
    // Adjust the starting bar width (essentially the horizontal zoom)
    chart2.timeScale().applyOptions({
-      barSpacing: 10
+      barSpacing: 12
    });
 
    // Customizing the Crosshair

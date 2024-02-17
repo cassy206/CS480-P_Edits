@@ -4,25 +4,29 @@
    <meta charset="UTF-8">
    <title>Stock Tracker</title>
    <link rel="stylesheet" href="/static/css/dashboard.css">
+   <link rel="stylesheet" href="/static/css/stock.css">
    <link rel="icon" type="image/x-icon" href="/static/icons/favicon.ico">
    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js" defer></script>
+   <script src="/static/js/charts.js" defer></script>
+   <script src="/static/js/sidebar.js" defer></script>
 </head>
 <body>
 <header>
    <a href="/">
       <img src="/static/images/logo.png" alt="Logo" onclick=""{{ url_for('views.dashboard') }}"">
    </a>
-   <h1>Daily Stock Information</h1>
+   <h1>{{ symbol }} Company Overview</h1>
    <form class="search" autocomplete="off" action="{{ url_for('views.stock') }}" method="GET">
       <input type="text" name="symbol" placeholder="Search stock..." required>
       <input type="submit" value="Submit">
    </form>
 </header>
 <section class="body-container">
-   <div id="sidebar"> Sidebar can go here maybe, put the info </div>
+   <ul id="sidebar">
+   </ul>
    <div id="chart"></div>
 </section>
    <p id="data" style="display:none;">{{ data }}</p>
-   <script src="/static/js/charts.js"></script>
+   <p id="overview" style="display:none;">{{ overview }}</p>
 </body>
 </html>
