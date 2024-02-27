@@ -36,3 +36,8 @@ body {
 .key {
     color: var(--accent);
 }
+
+h4 {
+    font-weight: bold;
+}
+
