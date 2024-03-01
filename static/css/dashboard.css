@@ -38,25 +38,44 @@ form input {
     background-color: var(--light);
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: Poppins, sans-serif;
     color: var(--textColor);
     text-align: center;
     font-size: 2rem;
 }
 
+h3 {
+    font-family: Poppins, sans-serif;
+    color: var(--textColor);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
 .dashboard-grid {
     display: flex;
+    flex-wrap: wrap;
     border: 1px solid var(--primary);
     justify-content: space-around;
     background-color: var(--secondary);
     border-radius: 10px;
-    margin: clamp(2em, 1.6vw, 6em);
+    margin: clamp(0.3em, 1.6vw, 0.4em);
     text-align: center;
+    width: 45%;
+    float:  left;
 }
 
 .dashboard-grid:hover {
     transform: scale(102%);
     transition-duration: 300ms;
     cursor: pointer;
+}
+
+.box {
+    width: 50%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
 }
