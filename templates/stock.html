@@ -9,6 +9,7 @@
    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js" defer></script>
    <script src="/static/js/charts.js" defer></script>
    <script src="/static/js/sidebar.js" defer></script>
+   <script src="/static/js/stockMenu.js" defer></script>
 </head>
 <body>
 <header>
@@ -22,7 +23,11 @@
    </form>
 </header>
 <section class="body-container">
-   <div id="chart"></div>
+   <div id="left-container">
+      <div id="chart"></div>
+      <h3>View more stocks</h3>
+      <div id="stockMenu"></div>
+   </div>
    <ul id="sidebar">
    </ul>
 </section>
