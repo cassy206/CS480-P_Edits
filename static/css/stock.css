@@ -56,6 +56,7 @@ h4 {
     background-color: var(--secondary);
     padding: 1rem;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 #stockMenu div:hover {
@@ -63,5 +64,16 @@ h4 {
     transition-duration: 300ms;
     background-color: var(--light);
 }
+
+a button {
+    border: 0;
+    border-radius: 5px;
+    color: var(--textColor);
+    font-size: 1rem;
+    background-color: var(--light);
+    padding: 1rem;
+    cursor: pointer;
+}
+
 
 

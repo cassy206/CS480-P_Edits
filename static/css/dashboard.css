@@ -20,17 +20,8 @@ header {
     margin: 2rem;
 }
 
-header img, header form, form input {
-    height: 3rem;
-}
-
-form input {
-    border: 0;
-    border-radius: 5px;
-    user-select: auto;
-    color: var(--textColor);
-    font-size: 1rem;
-    background-color: var(--light);
+header img, header p {
+    width: 10rem;
 }
 
 h1, h2, h3 {
@@ -44,7 +35,7 @@ h1, h2 {
 }
 
 h3 {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 .accent {

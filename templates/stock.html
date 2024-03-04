@@ -15,13 +15,12 @@
 <body>
 <header>
    <a href="/">
-      <img src="/static/images/logo.png" alt="Logo" onclick=""{{ url_for('views.dashboard') }}"">
+      <img src="/static/images/logo.png" alt="Logo">
    </a>
    <h1><span class="accent">{{ symbol }}</span> Company Overview</h1>
-   <form class="search" autocomplete="off" action="{{ url_for('views.stock') }}" method="GET">
-      <input type="text" name="symbol" placeholder="Search stock..." required>
-      <input type="submit" value="Submit">
-   </form>
+   <a href="/">
+      <button >Back to dashboard</button>
+   </a>
 </header>
 <section class="body-container">
    <div id="left-container">

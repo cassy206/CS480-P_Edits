@@ -13,6 +13,16 @@ for (let symbol in stockData) {
 
    let recentData = stockData[symbol];
 
+   let openPrice = parseFloat(recentData['1. open']);
+   let closePrice = parseFloat(recentData['4. close']);
+   let averagePrice = (openPrice + closePrice) / 2;
+
+   let current = document.createElement("h3");
+   current.className = "current";
+   current.textContent = "Current: $" + averagePrice.toFixed(2);
+   div.appendChild(current);
+
+
    let high = document.createElement("h3");
    high.className = "high";
    high.textContent = "High: $" + parseFloat(recentData['2. high']).toFixed(2);
