@@ -54,8 +54,9 @@ def stock():
     overview_url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={symbol}&apikey={AV_API_KEY}"
     overview_data = get_data(overview_url)
     overview_data = {key: overview_data[key] for key in overview_data}
+    url = url_for('views.stock')
 
-    return render_template("stock.html", data=json.dumps(chart_data), overview=json.dumps(overview_data), symbol=symbol)
+    return render_template("stock.html", data=json.dumps(chart_data), overview=json.dumps(overview_data), symbol=symbol, url=url)
 
 
 

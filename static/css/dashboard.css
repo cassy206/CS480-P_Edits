@@ -76,6 +76,7 @@ body div h3 {
     transform: scale(102%);
     transition-duration: 300ms;
     cursor: pointer;
+    background-color: var(--light);
 }
 
 .container {

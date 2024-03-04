@@ -55,6 +55,13 @@ h4 {
 #stockMenu div {
     background-color: var(--secondary);
     padding: 1rem;
+    cursor: pointer;
+}
+
+#stockMenu div:hover {
+    transform: scale(102%);
+    transition-duration: 300ms;
+    background-color: var(--light);
 }
 
 
