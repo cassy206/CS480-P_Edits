@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
    // Changing the Candlestick colors
    candlestickSeries.applyOptions({
-       wickUpColor: "#3dd93d",
-       upColor: "#3dd93d",
-      wickDownColor: "rgb(225, 50, 85)",
-      downColor: "rgb(225, 50, 85)",
+      wickUpColor: "#008000",
+      upColor: "#008000",
+      wickDownColor: "#FF0000",
+      downColor: "#FF0000",
       borderVisible: false
    });
 

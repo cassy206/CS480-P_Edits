@@ -9,20 +9,25 @@
    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js" defer></script>
    <script src="/static/js/charts.js" defer></script>
    <script src="/static/js/sidebar.js" defer></script>
+   <script src="/static/js/stockMenu.js" defer></script>
+   <script defer>let url = '{{ url }}';</script>
 </head>
 <body>
 <header>
    <a href="/">
-      <img src="/static/images/logo.png" alt="Logo" onclick=""{{ url_for('views.dashboard') }}"">
+      <img src="/static/images/logo.png" alt="Logo">
    </a>
    <h1><span class="accent">{{ symbol }}</span> Company Overview</h1>
-   <form class="search" autocomplete="off" action="{{ url_for('views.stock') }}" method="GET">
-      <input type="text" name="symbol" placeholder="Search stock..." required>
-      <input type="submit" value="Submit">
-   </form>
+   <a href="/">
+      <button >Back to dashboard</button>
+   </a>
 </header>
 <section class="body-container">
-   <div id="chart"></div>
+   <div id="left-container">
+      <div id="chart"></div>
+      <h3>View more stocks</h3>
+      <div id="stockMenu"></div>
+   </div>
    <ul id="sidebar">
    </ul>
 </section>
