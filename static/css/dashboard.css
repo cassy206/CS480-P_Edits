@@ -54,7 +54,8 @@ h3 {
 
 .dashboard-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid var(--primary);
     justify-content: space-around;
     background-color: var(--secondary);
@@ -63,7 +64,6 @@ h3 {
     text-align: center;
     width: 45%;
     float: left;
-
 }
 
 .dashboard-grid:hover {
