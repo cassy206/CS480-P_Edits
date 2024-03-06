@@ -57,13 +57,13 @@ h3 {
     flex-direction: column;
     align-items: center;
     border: 1px solid var(--primary);
-    justify-content: space-around;
     background-color: var(--secondary);
     border-radius: 10px;
     margin: clamp(0.3em, 1.6vw, 0.4em);
     text-align: center;
     width: 45%;
     float: left;
+}
 }
 
 .dashboard-grid:hover {
@@ -79,4 +79,9 @@ h3 {
 .container {
     display: flex;
     flex-wrap: wrap;
+}
+
+.ticker {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add some margin below the ticker */
 }
