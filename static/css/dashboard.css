@@ -14,66 +14,60 @@ body {
     background: var(--primary);
 }
 
-.accent {
-    color: var(--accent);
-}
-
 header {
     display: flex;
     justify-content: space-between;
     margin: 2rem;
 }
 
-header img, header form {
-    height: 3rem;
+header img, header p {
+    width: 10rem;
 }
 
-form input {
-    border: 0;
-    border-radius: 5px;
-    user-select: auto;
-    height: 3rem;
-    color: var(--textColor);
-    font-size: 1rem;
-    background-color: var(--light);
-}
-
-h1, h2 {
+h1, h2, h3 {
     font-family: Poppins, sans-serif;
     color: var(--textColor);
     text-align: center;
+}
+
+h1, h2 {
     font-size: 2rem;
 }
 
 h3 {
-    font-family: Poppins, sans-serif;
-    color: var(--textColor);
-    text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2vw;
+}
+
+.accent {
+    color: var(--accent);
 }
 
 .dashboard-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--primary);
+    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: var(--secondary);
+    border: 1px solid var(--primary);
     border-radius: 10px;
-    margin: clamp(0.3em, 1.6vw, 0.4em);
+    margin: 0.5%;
     text-align: center;
-    width: 45%;
+    width: 49%;
+    height: 12vh;
     float: left;
 }
+
+body div h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .dashboard-grid:hover {
     transform: scale(102%);
     transition-duration: 300ms;
     cursor: pointer;
-}
-
-.box {
-    width: 50%;
+    background-color: var(--light);
 }
 
 .container {
@@ -81,7 +75,6 @@ h3 {
     flex-wrap: wrap;
 }
 
-.ticker {
-    font-size: 1.5rem; /* Adjust the font size as needed */
-    margin-bottom: 10px; /* Add some margin below the ticker */
+.box {
+    width: 50%;
 }
